@@ -1,0 +1,35 @@
+{
+  "name": "kth-node-inferno",
+  "version": "0.1.0",
+  "description": "Server-side rendering helpers for isomorphic inferno.js in Node.js projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"ok\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KTH/kth-node-inferno.git"
+  },
+  "keywords": [
+    "infernojs",
+    "isomorphic",
+    "kth"
+  ],
+  "author": "Sebastian Ware <sebastian@urbantalk.se> (https://github.com/jhsware)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KTH/kth-node-inferno/issues"
+  },
+  "homepage": "https://github.com/KTH/kth-node-inferno#readme",
+  "dependencies": {
+    "deep-assign": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "kth-node-build-commons": "^3.0.2",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^2.5.1",
+    "webpack-stream": "^3.2.0"
+  }
+}
