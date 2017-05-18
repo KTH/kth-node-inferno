@@ -6,7 +6,7 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
-        plugins: ['transform-decorators-legacy' ]
+        plugins: ['transform-decorators-legacy']
       }
     }]
   }
