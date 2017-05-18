@@ -40,6 +40,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-print": "^2.0.1",
     "kth-node-build-commons": "^3.0.2",
+    "standard": "^10.0.2",
     "vinyl-named": "^1.1.0",
     "webpack": "^2.5.1",
     "webpack-stream": "^3.2.0"
