@@ -4,7 +4,9 @@
   "description": "Server-side rendering helpers for isomorphic inferno.js in Node.js projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"ok\""
+    "test": "echo \"ok\"",
+    "preversion": "standard && npm run test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
