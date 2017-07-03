@@ -1,3 +1,5 @@
+const Visualizer = require('webpack-visualizer-plugin')
+
 module.exports = {
   target: 'node',
   devtool: 'source-map', // TODO: example sets this to false
@@ -14,5 +16,10 @@ module.exports = {
       }
     }]
   },
-  externals: Object.keys(require('../package.json').dependencies)
+  externals: Object.keys(require('../package.json').dependencies),
+  plugins: [
+    new Visualizer({
+      filename: './infernoServerSize.html'
+    })
+  ]
 }
