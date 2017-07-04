@@ -4,7 +4,6 @@ const webpack = require('webpack')
 
 const isProd = process.env.NODE_ENV === 'production'
 
-
 const webpackPlugins = []
 if (isProd) {
   webpackPlugins.push(new UglifyJSPlugin())
@@ -16,15 +15,14 @@ webpackPlugins.push(new Visualizer({
   filename: './infernoClientSize.html'
 }))
 
-
 const babelPlugins = [
-  "transform-decorators-legacy",
-  // ["transform-runtime"], // This includes a package with polyfills etc, but the final size is larger because unused polyfills aren't removed
-  "babel-plugin-syntax-jsx",
+  'transform-decorators-legacy',
+  // ['transform-runtime'], // This includes a package with polyfills etc, but the final size is larger because unused polyfills aren't removed
+  'babel-plugin-syntax-jsx',
   [
-    "babel-plugin-inferno",
+    'babel-plugin-inferno',
     {
-      "imports": true
+      'imports': true
     }
   ]
 ]

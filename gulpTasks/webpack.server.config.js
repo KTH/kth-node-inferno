@@ -1,13 +1,13 @@
 const Visualizer = require('webpack-visualizer-plugin')
 
 const babelPlugins = [
-  "transform-decorators-legacy",
-  ["transform-runtime", { "helpers": false, "polyfill": false, "regenerator": true }],
-  "babel-plugin-syntax-jsx",
+  'transform-decorators-legacy',
+  ['transform-runtime', { 'helpers': false, 'polyfill': false, 'regenerator': true }],
+  'babel-plugin-syntax-jsx',
   [
-    "babel-plugin-inferno",
+    'babel-plugin-inferno',
     {
-      "imports": true
+      'imports': true
     }
   ]
 ]
