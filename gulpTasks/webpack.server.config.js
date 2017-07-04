@@ -1,5 +1,17 @@
 const Visualizer = require('webpack-visualizer-plugin')
 
+const babelPlugins = [
+  "transform-decorators-legacy",
+  ["transform-runtime", { "helpers": false, "polyfill": false, "regenerator": true }],
+  "babel-plugin-syntax-jsx",
+  [
+    "babel-plugin-inferno",
+    {
+      "imports": true
+    }
+  ]
+]
+
 module.exports = {
   target: 'node',
   devtool: 'source-map', // TODO: example sets this to false
@@ -12,7 +24,15 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
-        plugins: ['transform-decorators-legacy']
+        plugins: babelPlugins
+      }
+    },
+    {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      query: {
+        // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
+        plugins: babelPlugins
       }
     }]
   },
