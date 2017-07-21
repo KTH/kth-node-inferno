@@ -10,7 +10,6 @@ const deepAssign = require('deep-assign')
 const buildCommons = require('kth-node-build-commons').tasks()
 const onError = buildCommons.onError
 
-
 module.exports = function (options) {
   /*
     options.destinationPath -- target directory for generated files
