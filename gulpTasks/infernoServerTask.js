@@ -5,15 +5,19 @@ const print = require('gulp-print')
 const webpackConfig = require('./webpack.server.config')
 const gulpWebpack = require('webpack-stream')
 const webpack2 = require('webpack')
+const deepAssign = require('deep-assign')
 
 const buildCommons = require('kth-node-build-commons').tasks()
 const onError = buildCommons.onError
+
 
 module.exports = function (options) {
   /*
     options.destinationPath -- target directory for generated files
     options.src -- passed to: gulp.src(options.src)
   */
+  deepAssign(webpackConfig, { resolve: { modules: ['node_modules'] } })
+
   return function (env) {
     const destinationPath = options.destinationPath || 'dist/js/server'
 

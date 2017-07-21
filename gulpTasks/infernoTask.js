@@ -17,7 +17,7 @@ module.exports = function (options) {
     options.__dirname --
   */
 
-  deepAssign(webpackConfig, { resolve: { modules: [options.dirname + '/node_modules'] } })
+  deepAssign(webpackConfig, { resolve: { modules: ['node_modules'] } })
 
   return function (env) {
     const destinationPath = options.destinationPath || 'dist/js/inferno'
