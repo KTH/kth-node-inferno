@@ -1,5 +1,3 @@
-const Visualizer = require('webpack-visualizer-plugin')
-
 const babelPlugins = [
   'transform-decorators-legacy',
   ['transform-runtime', { 'helpers': false, 'polyfill': false, 'regenerator': true }],
@@ -36,10 +34,5 @@ module.exports = {
       }
     }]
   },
-  externals: Object.keys(require('../package.json').dependencies),
-  plugins: [
-    new Visualizer({
-      filename: './infernoServerSize.html'
-    })
-  ]
+  externals: Object.keys(require('../package.json').dependencies)
 }

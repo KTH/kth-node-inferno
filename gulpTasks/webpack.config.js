@@ -10,10 +10,10 @@ if (isProd) {
   webpackPlugins.push(new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   }))
+  webpackPlugins.push(new Visualizer({
+    filename: './infernoClientSize.html'
+  }))
 }
-webpackPlugins.push(new Visualizer({
-  filename: './infernoClientSize.html'
-}))
 
 const babelPlugins = [
   'transform-decorators-legacy',
