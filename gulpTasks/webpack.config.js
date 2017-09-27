@@ -17,6 +17,8 @@ if (isProd) {
 
 const babelPlugins = [
   'transform-decorators-legacy',
+  'transform-object-rest-spread',
+  'add-module-exports',
   // ['transform-runtime'], // This includes a package with polyfills etc, but the final size is larger because unused polyfills aren't removed
   'babel-plugin-syntax-jsx',
   [

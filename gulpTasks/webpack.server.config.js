@@ -1,5 +1,6 @@
 const babelPlugins = [
   'transform-decorators-legacy',
+  'transform-object-rest-spread',
   ['transform-runtime', { 'helpers': false, 'polyfill': false, 'regenerator': true }],
   'babel-plugin-syntax-jsx',
   [
