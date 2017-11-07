@@ -1,5 +1,7 @@
 # kth-node-inferno
-Server-side rendering helpers and Gulp transpiling tasks for isomorphic Inferno.js in Node.js projects.
+Gulp transpiling tasks for isomorphic Inferno.js in Node.js projects.
+
+Install with `npm i -D kth-node-inferno babel-preset-es2015 babel-preset-stage-0 babel-eslint eslint-config-standard eslint-config-standard-jsx`
 
 ## ES6-support and presets
 
