@@ -34,6 +34,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx$/,
+      exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
@@ -42,6 +43,7 @@ module.exports = {
     },
     {
       test: /\.js$/,
+      exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
