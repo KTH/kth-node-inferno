@@ -2,13 +2,21 @@ const babelPlugins = [
   'transform-decorators-legacy',
   'transform-object-rest-spread',
   ['transform-runtime', { 'helpers': false, 'polyfill': false, 'regenerator': true }],
-  'babel-plugin-syntax-jsx',
   [
     'babel-plugin-inferno',
     {
       'imports': true
     }
   ]
+]
+
+const babelPresets = [
+  ["env", {
+    "targets": {
+      "node": "current"
+    }
+  }],
+  "stage-0"
 ]
 
 module.exports = {
@@ -24,7 +32,8 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
-        plugins: babelPlugins
+        plugins: babelPlugins,
+        presets: babelPresets
       }
     },
     {
@@ -33,7 +42,8 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
-        plugins: babelPlugins
+        plugins: babelPlugins,
+        presets: babelPresets
       }
     }]
   },

@@ -19,14 +19,21 @@ const babelPlugins = [
   'transform-decorators-legacy',
   'transform-object-rest-spread',
   'add-module-exports',
-  // ['transform-runtime'], // This includes a package with polyfills etc, but the final size is larger because unused polyfills aren't removed
-  'babel-plugin-syntax-jsx',
   [
     'babel-plugin-inferno',
     {
       'imports': true
     }
   ]
+]
+
+const babelPresets = [
+  ["env", {
+    "targets": {
+      "browsers": ["last 3 versions", "ie >= 11"]
+    }
+  }],
+  "stage-0"
 ]
 
 module.exports = {
@@ -38,7 +45,8 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
-        plugins: babelPlugins
+        plugins: babelPlugins,
+        presets: babelPresets
       }
     },
     {
@@ -47,7 +55,8 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         // babel-loader doesn't pick up the transform-decorators-legacy plugin setting from babelrc entry in package.json
-        plugins: babelPlugins
+        plugins: babelPlugins,
+        presets: babelPresets
       }
     }]
   },
