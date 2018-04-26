@@ -1,3 +1,4 @@
+const path = require('path')
 const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const named = require('vinyl-named')
@@ -10,12 +11,18 @@ const deepAssign = require('deep-assign')
 const buildCommons = require('kth-node-build-commons').tasks()
 const onError = buildCommons.onError
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 module.exports = function (options) {
   /*
     options.destinationPath -- target directory for generated files
     options.src -- passed to: gulp.src(options.src)
   */
   deepAssign(webpackConfig, { resolve: { modules: ['node_modules'] } })
+
+  if (isDev) {
+    deepAssign(webpackConfig, { resolve: { alias: { inferno: path.resolve(require.resolve('inferno/dist/index.dev.esm.js')) } } })
+  }
 
   return function (env) {
     const destinationPath = options.destinationPath || 'dist/js/server'
