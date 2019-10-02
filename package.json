@@ -18,7 +18,11 @@
     "isomorphic",
     "kth"
   ],
-  "author": "Sebastian Ware <sebastian@urbantalk.se> (https://github.com/jhsware)",
+  "author": {
+    "name": "KTH",
+    "email": "infosys@kth.se",
+    "url": "https://github.com/KTH"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KTH/kth-node-inferno/issues"
