@@ -1,9 +1,10 @@
 {
   "name": "kth-node-inferno",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Server-side rendering helpers for isomorphic inferno.js in Node.js projects",
   "main": "index.js",
   "scripts": {
+    "build": "./build.sh",
     "test": "echo \"ok\"",
     "preversion": "standard && npm run test",
     "postversion": "git push && git push --tags"
