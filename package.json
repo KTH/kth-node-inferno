@@ -1,6 +1,6 @@
 {
   "name": "kth-node-inferno",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Server-side rendering helpers for isomorphic inferno.js in Node.js projects",
   "main": "index.js",
   "scripts": {
@@ -42,6 +42,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-print": "^5.0.2",
     "kth-node-build-commons": "^4.0.4",
+    "loader-utils": "^1.2.3",
     "prettier": "^1.16.4",
     "pretty-quick": "1.10.0",
     "standard": "^10.0.2",
