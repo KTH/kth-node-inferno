@@ -44,6 +44,16 @@ module.exports = function(options) {
     // const jsFilter = filter('**/*.js*', {restore: true})
     // const cssFilter = filter('**/*.css*', {restore: true})
 
+    // Allows user to pass exclude option to each loader
+    const newWebpackConfig = Object.assign({}, webpackConfig)
+
+    if (options.exclude) {
+      newWebpackConfig.module.loaders = newWebpackConfig.module.loaders.map(loader => {
+        loader.exclude = options.exclude
+        return loader
+      })
+    }
+
     return (
       gulp
         .src(options.src)
