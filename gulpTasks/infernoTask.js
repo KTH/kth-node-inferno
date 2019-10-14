@@ -34,6 +34,15 @@ module.exports = function (options) {
     // const jsFilter = filter('**/*.js*', {restore: true})
     // const cssFilter = filter('**/*.css*', {restore: true})
 
+    const newWebpackConfig = Object.assign({}, webpackConfig)
+
+    if (options.exclude) {
+      newWebpackConfig.module.loaders = newWebpackConfig.module.loaders.map(loader => {
+        loader.exclude = options.exclude
+        return loader
+      })
+    }
+
     return gulp.src(options.src)
       .pipe(print())
       .pipe(named())
@@ -41,7 +50,7 @@ module.exports = function (options) {
         errorHandler: onError
       }))
       // Passing webpack 2 to webpack-stream because webpack-stream is bundled with an older version
-      .pipe(gulpWebpack(webpackConfig, webpack2))
+      .pipe(gulpWebpack(newWebpackConfig, webpack2))
       // .pipe(jsFilter)
       .pipe(gulp.dest(destinationPath))
       // .pipe(jsFilter.restore)
