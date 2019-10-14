@@ -18,7 +18,6 @@ if (isProd) {
 const babelPlugins = [
   'transform-decorators-legacy',
   'transform-object-rest-spread',
-  'transform-es2015-arrow-functions',
   'add-module-exports',
   [
     'babel-plugin-inferno',
