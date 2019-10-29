@@ -1,6 +1,6 @@
 {
   "name": "kth-node-inferno",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Server-side rendering helpers for isomorphic inferno.js in Node.js projects",
   "main": "index.js",
   "scripts": {
@@ -48,7 +48,7 @@
     "standard": "^10.0.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "vinyl-named": "^1.1.0",
-    "webpack": "^2.7.0",
+    "webpack": "^3.4.1",
     "webpack-stream": "^5.2.1",
     "webpack-visualizer-plugin": "^0.1.11"
   },
