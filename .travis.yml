@@ -1,11 +1,3 @@
 language: node_js
 node_js:
 - '6.9.1'
-deploy:
-  provider: npm
-  email: webmaster-private@kth.se
-  api_key:
-    secure: HDOQy3lR0xOdZNqa8Nr9SkqiFskDS0swmcwk4j2KhBX7QgSvXCFvEqviEzk5cte6qhzY6NJdZ7crqofoDSoX3ItP/3rOaW60Q/z6bscatsaPqRacIQmB0KvlsJB9kPzRfCtOG+bTlRG4G5hR6o4szTDcnvhTtjEoveWOUjxSbsCcg2iW7eo6SP76qdb/u9jywFtdA/452pT3pV4DtB8TMpHOPfZUQOKlfbwIvUvrcf8g35MZbq621FWoGgIzFmvduPRp9T0PKDjNGHgvjYyXGwp4nAZs90hWpmPFNGIQONiqOBAfrsFWzyq10Kxh4VWVUh4q3Yg0INYEhQBCkA/1OmrMg+WgbR2EU0yOSFo9PTmmoDJb/D3HDDiiCVvfo3UQUxYKxAv4IgZVHeR7VUZmN4bXssYXMtSdLBBBFYepu84rWfHlatA/OpVd2/fy69VQtbm4Nlc12gi7OPfc0YdT5f95RxEGu/4wQfkVyBR4TT9fFZUKjIxPa4EuAuQ0G0StpjYQAcD2QE1vf/vEFeSpDd5VKICYsWybDUciP2fCqbzGwRhfrErkk1fTXM7ykELtad8XN4LEs7Jpn5KqH5Rfg3czyts5SHFJlGkFv8V8jrthGV8CoQmCobfdRY2FL95m10y8byN3eHkkrjL7b7Wu+iRbT0mlr2kLnYXBT7dwilU=
-  on:
-    tags: true
-    repo: KTH/kth-node-inferno
